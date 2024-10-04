@@ -1,6 +1,17 @@
 # K.S.U.Q.T. (KeyStroke Usb QT) Key
 An open-source, low cost, Rubber Ducky mimic utilizing the Adafruit Trinkey QT2040 and the Adafruit USB_Hid library.
 
+# Installation
+
+- Install the latest circuitpython on the trinkey using this guide: https://learn.adafruit.com/adafruit-trinkey-qt2040/circuitpython
+- Once CircuitPython has been installed, just drag and drop all files into the pi pico.
+- Rename the "KSUQTBase.py" file, or whatever version of the file you are using, to "code.py".
+- KSUQT is now ready to run!
+
+# Usage
+
+The scripting is fairly straightforward and barebones. All commands are shown below. Once your script is ready, drop it into the script folder, and rename it "script.txt". 
+The Script you want to run MUST be named "script.txt" as that is how it is defined the code. You can change it if you want.
 
 # KSUQT Device Commands
 
