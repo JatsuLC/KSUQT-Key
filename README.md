@@ -4,7 +4,7 @@ An open-source, low cost, Rubber Ducky mimic utilizing the Adafruit Trinkey QT20
 # Installation
 
 - Install the latest circuitpython on the trinkey using this guide: https://learn.adafruit.com/adafruit-trinkey-qt2040/circuitpython
-- Once CircuitPython has been installed, just drag and drop all files into the pi pico.
+- Once CircuitPython has been installed, just drag and drop all files into the pi pico. Please note, for the Base Version, only libraries "adafruit_hid" and "neopixel.py" are needed.
 - Rename the "KSUQTBase.py" file, or whatever version of the file you are using, to "code.py".
 - KSUQT is now ready to run!
 
