@@ -1,5 +1,5 @@
 # K.S.U.Q.T. (KeyStroke Usb QT) Key
-An open-source, low cost, Rubber Ducky mimic utilizing the Adafruit Trinkey QT2040.
+An open-source, low cost, Rubber Ducky mimic utilizing the Adafruit Trinkey QT2040 and the Adafruit USB_Hid library.
 
 
 # KSUQT Device Commands
