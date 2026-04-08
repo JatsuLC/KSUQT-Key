@@ -1,5 +1,5 @@
-# K.S.U.Q.T. (KeyStroke Usb QT) Key
-Pronounced Kiss-you-QT, KSUQT is an open-source, low cost, Rubber Ducky mimic utilizing the Adafruit Trinkey QT2040 and the Adafruit USB_Hid library.
+# BADQt (KeyStroke Usb QT) Key
+Pronounced Bad-Q-T, BADQt is an open-source, low cost, Rubber Ducky mimic utilizing the Adafruit Trinkey QT2040 and the Adafruit USB_Hid library.
 
 # Installation
 
@@ -13,7 +13,7 @@ Pronounced Kiss-you-QT, KSUQT is an open-source, low cost, Rubber Ducky mimic ut
 The scripting is fairly straightforward and barebones. All commands are shown below. Once your script is ready, drop it into the script folder, and rename it "script.txt". 
 The Script you want to run MUST be named "script.txt" as that is how it is defined the code. You can change it if you want.
 
-# KSUQT Device Commands
+# BADQt Device Commands
 
 Note: All command values that continue with "..." means that more than 1 value can be input. if no "..." is present, then only 1 value can be input.
 - Use '#' to insert comments in a script.
